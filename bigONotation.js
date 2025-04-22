@@ -42,3 +42,33 @@
 // Constants (O(2n) is still O(n))
 
 // Lower-order terms (O(n² + n) is still O(n²))
+
+// ! Big O Shorthands
+// Arthimetic operations are constant
+// variable assignment is constant
+// accessing elements in an array (by index) or object (by key) is constant
+// In a loop, the complexity is the lenght of the loop times the complexity of whatever inside of the loop
+
+// ! Space Complexity in JS
+
+// rule of thumb
+
+// Most primites (boolean, numbers, undefined, null) are constant space.
+// Strings require O(n) space (where n is the string length)
+// Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for Objects)
+
+//!  Big O of Objects
+// ** Insertion - O(1)
+// ** Removal - O(1)
+// ** Searching - O(N)
+// ** Access - O(1)
+
+//--> When you don't need any ordering objects are an excellent choice!
+
+// ! Big O of Object Methods
+// ** Object.keys - O(N)
+// ** Object.values - O(N)
+// ** Object.entries - O(N)
+// ** hasOwnProperty - O(1)
+
+// ! Big O of Array Methods
