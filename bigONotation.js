@@ -1,3 +1,38 @@
+// ? Write a function that accepts a string input and returns a reversed copy
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+function reverseString2(str) {
+  let reveredStr = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reveredStr += str[i];
+  }
+  return reveredStr;
+}
+
+console.log(reverseString("hey"), reverseString("peter"));
+console.log(reverseString2("hey"), reverseString2("peter"));
+
+// sum of n numbers
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
+console.log(addUpTo(5)); // time complexity o(n)
+
+function addUpTo(n) {
+  let total = (n * (n + 1)) / 2;
+
+  return total;
+}
+console.log(addUpTo(6)); // time complexity o(1)
+
 // ! The Problem With Time
 
 // --> different machines will recond different times
@@ -30,6 +65,16 @@
 
 // O(n²): Quadratic time
 // Gets slow quickly. Happens with nested loops — like comparing every pair in a list.
+
+// ? print all pairs
+function printAllPairs(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+}
+printAllPairs(5); // O(n²): Quadratic time
 
 // O(2ⁿ) or O(n!): Exponential time
 // Extremely slow. These show up in brute-force algorithms or recursion-heavy problems (like solving puzzles or traveling salesman).
