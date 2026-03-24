@@ -102,18 +102,25 @@ printAllPairs(5); // O(n²): Quadratic time
 // Strings require O(n) space (where n is the string length)
 // Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for Objects)
 
-//!  Big O of Objects
-// ** Insertion - O(1)
-// ** Removal - O(1)
-// ** Searching - O(N)
-// ** Access - O(1)
-
-//--> When you don't need any ordering objects are an excellent choice!
-
 // ! Big O of Object Methods
 // ** Object.keys - O(N)
 // ** Object.values - O(N)
 // ** Object.entries - O(N)
 // ** hasOwnProperty - O(1)
+// --> When you don't need any ordering objects are an excellent choice!
 
-// ! Big O of Array Methods
+// ! Big O of Array Methods (order lists)
+// ** Insertion - depends if push() then O(1) if unShif() then O(N)
+// ** Removal - depends if pop() then O(1) if shif() then O(N)
+// ** Searching - O(N)
+// ** Access - O(1)
+
+// ! Big O of Array operations
+// push - o(1)
+// pop - o(1)
+// shift - o(N)
+// unshift - o(N)
+// concat - o(N)
+// slice - o(N)
+// splice - o(N)
+// sort - o(N log N)
