@@ -1,0 +1,24 @@
+{
+  "name": "data-structures-and-algo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bigONotation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuj-My/Data-Structures-and-Algo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anuj-My/Data-Structures-and-Algo/issues"
+  },
+  "homepage": "https://github.com/anuj-My/Data-Structures-and-Algo#readme",
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
