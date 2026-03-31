@@ -91,6 +91,14 @@ function checkCharType(char) {
   if (charCode >= 97 && charCode <= 122) {
     console.log("Lowercase Letter");
   }
+
+  if (
+    (charCode >= 33 && charCode <= 47) ||
+    (charCode >= 58 && charCode <= 64) ||
+    (charCode >= 91 && charCode <= 96)
+  ) {
+    console.log("Special Character");
+  }
 }
 
 checkCharType("A");
