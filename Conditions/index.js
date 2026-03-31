@@ -105,3 +105,20 @@ checkCharType("A");
 checkCharType("a");
 checkCharType("1");
 checkCharType("@");
+
+function checkTriangleType(a, b, c) {
+  if (a ** 2 + b ** 2 === c ** 2) {
+    console.log("Right-Angle Triangle");
+  } else if (a === b && a === c && b === c) {
+    console.log("Equilateral");
+  } else if (a === b || a === c || b === c) {
+    console.log("Isosceles");
+  } else {
+    console.log("Scalene");
+  }
+}
+console.log("------triangle--------");
+checkTriangleType(3, 4, 5);
+checkTriangleType(2, 2, 2);
+checkTriangleType(2, 2, 5);
+checkTriangleType(2, 1, 5);
