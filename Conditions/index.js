@@ -75,3 +75,25 @@ function leapYear(year) {
 leapYear(2024);
 leapYear(2026);
 leapYear(2028);
+
+function checkCharType(char) {
+  const charCode = char.charCodeAt(0);
+  console.log(charCode);
+  // digit
+  if (charCode >= 48 && charCode <= 57) {
+    console.log("Digit as Letter");
+  }
+  // uppercase
+  if (charCode >= 65 && charCode <= 90) {
+    console.log("Uppercase Letter");
+  }
+  // Lowercase
+  if (charCode >= 97 && charCode <= 122) {
+    console.log("Lowercase Letter");
+  }
+}
+
+checkCharType("A");
+checkCharType("a");
+checkCharType("1");
+checkCharType("@");
