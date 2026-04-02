@@ -44,3 +44,40 @@ function pyramid(rows) {
 }
 
 pyramid(5);
+
+console.log("inverted pyramid star pattern...");
+
+function invertedPyramid(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let str = "";
+
+    for (let j = 1; j <= i - 1; j++) {
+      str = str + " ";
+    }
+
+    for (let j = 1; j <= 2 * (rows - i) + 1; j++) {
+      str = str + "*";
+    }
+    console.log(str);
+  }
+}
+
+invertedPyramid(5);
+
+console.log("Hollow square star pattern...");
+
+function hollowSquareStar(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let str = "";
+    for (let j = 1; j <= rows; j++) {
+      if (i === 1 || i === rows || j === 1 || j === rows) {
+        str = str + "*";
+      } else {
+        str = str + " ";
+      }
+    }
+    console.log(str);
+  }
+}
+
+hollowSquareStar(5);
