@@ -84,3 +84,38 @@ console.log(findFirstUniqueChar3("abaabc"));
 console.log(findFirstUniqueChar3("nitin"));
 
 // 4. How do you remove duplicates from an array?
+// solution 1: O(N)
+const removeDuplicates = (arr) => {
+  const uniqueArr = new Set(arr);
+  return [...uniqueArr];
+};
+
+console.log(removeDuplicates([2, 1, 6, 8, 9, 1, 2, 1, 6]));
+console.log(removeDuplicates([2, 1, 6, 8, 9, 1, 12, 41, 6]));
+
+// solution 2: O(n^2)
+const removeDuplicates2 = (arr) => {
+  const uniqueArr = arr.filter((item, index) => arr.indexOf(item) === index);
+  return uniqueArr;
+};
+
+console.log(removeDuplicates2([2, 1, 6, 8, 9, 1, 2, 1, 6]));
+console.log(removeDuplicates2([2, 1, 6, 8, 9, 1, 12, 41, 6]));
+
+// solution 3: O(n)
+const removeDuplicates3 = (arr) => {
+  const map = new Map();
+  const unique = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!map.has(arr[i])) {
+      map.set(arr[i], 1);
+      unique.push(arr[i]);
+    }
+  }
+
+  return unique;
+};
+console.log("--- using frequency---");
+console.log(removeDuplicates3([2, 1, 6, 8, 9, 1, 2, 1, 6]));
+console.log(removeDuplicates3([2, 1, 6, 8, 9, 1, 12, 41, 6]));
