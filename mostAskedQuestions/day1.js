@@ -119,3 +119,17 @@ const removeDuplicates3 = (arr) => {
 console.log("--- using frequency---");
 console.log(removeDuplicates3([2, 1, 6, 8, 9, 1, 2, 1, 6]));
 console.log(removeDuplicates3([2, 1, 6, 8, 9, 1, 12, 41, 6]));
+
+// solution 4: O(n^2)
+const removeDuplicates4 = (arr) => {
+  const uniqueArr = arr.reduce((acc, cur) => {
+    if (!acc.includes(cur)) {
+      acc.push(cur);
+    }
+    return acc;
+  }, []);
+  return uniqueArr;
+};
+console.log("--- using reduce---");
+console.log(removeDuplicates4([2, 1, 6, 8, 9, 1, 2, 1, 6]));
+console.log(removeDuplicates4([2, 1, 6, 8, 9, 1, 12, 41, 6]));
