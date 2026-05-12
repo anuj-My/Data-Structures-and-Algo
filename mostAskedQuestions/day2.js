@@ -23,7 +23,7 @@ const maxSumSubarray = (arr) => {
 console.log(maxSumSubarray([4, -1, 2, 1]));
 console.log(maxSumSubarray([-3, -2, -5]));
 
-// Write a function called same, which accepts two arrays. the function should return true if every value in the array has its corresponding value squared in the second array. The frequency of Values must be the same.
+// 6. Write a function called same, which accepts two arrays. the function should return true if every value in the array has its corresponding value squared in the second array. The frequency of Values must be the same.
 
 // first solution: O(N^2)
 const same = (arr1, arr2) => {
@@ -75,4 +75,29 @@ console.log(same2([1, 2, 3], [1, 9])); // false
 console.log(same2([1, 2, 1], [4, 4, 1])); // false
 
 // ? Frequency Counter - validAnagram
-// Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+// 7. Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+
+const anagram = (str1, str2) => {
+  if (str1.length !== str2.length) return false;
+  const obj1 = {};
+  const obj2 = {};
+
+  for (const item of str1) {
+    obj1[item] = (obj1[item] || 0) + 1;
+  }
+
+  for (const item of str2) {
+    obj2[item] = (obj2[item] || 0) + 1;
+  }
+
+  for (const key in obj1) {
+    if (!obj2[key]) return false;
+    if (obj1[key] !== obj2[key]) return false;
+  }
+
+  return true;
+};
+console.log("anagram-----");
+console.log(anagram("iceman", "cinema"));
+console.log(anagram("iceman", "cinem"));
+console.log(anagram("elven", "leevn"));
