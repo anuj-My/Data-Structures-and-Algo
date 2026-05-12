@@ -119,3 +119,29 @@ console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 0));
 console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 2));
 console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 8));
 console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 9));
+
+// using two pointer
+// solution second:
+
+const twoSum2 = (arr, target) => {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    const sum = arr[left] + arr[right];
+    if (sum === target) {
+      return [arr[left], arr[right]];
+    } else if (sum > target) {
+      right--;
+    } else {
+      left++;
+    }
+  }
+
+  return -1;
+};
+
+console.log(twoSum2([-4, -3, 0, 1, 2, 3, 5], 0));
+console.log(twoSum2([-4, -3, 0, 1, 2, 3, 5], 2));
+console.log(twoSum2([-4, -3, 0, 1, 2, 3, 5], 8));
+console.log(twoSum2([-4, -3, 0, 1, 2, 3, 5], 9));
