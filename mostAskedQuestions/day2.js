@@ -101,3 +101,21 @@ console.log("anagram-----");
 console.log(anagram("iceman", "cinema"));
 console.log(anagram("iceman", "cinem"));
 console.log(anagram("elven", "leevn"));
+
+// write a function called twoSum that accepts a sorted array of integers and a target integer. find first pair where sum is equal to target.
+
+const twoSum = (arr, target) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+  return -1;
+};
+
+console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 0));
+console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 2));
+console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 8));
+console.log(twoSum([-4, -3, 0, 1, 2, 3, 5], 9));
